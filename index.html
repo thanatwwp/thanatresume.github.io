@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta name="portfolio-release" content="2026-11-24-easy-read" />
+  <meta name="portfolio-release" content="2026-11-24-projects-showcase" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The personal portfolio of Thanat Manthananont — an entrepreneurship student at Chiang Mai University with experience in international exchange, team leadership, and digital innovation.">
@@ -486,6 +486,62 @@
       .contact-link { padding: 14px 15px; }
       .contact-link small { font-size: 12.5px; }
     }
+
+    /* Selected work — readable, editorial project showcase */
+    .nav-links { gap: 19px; }
+    .projects-area { background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .projects-area .section-heading { max-width: 790px; }
+    .projects-area .section-heading p { max-width: 700px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .project-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); background: var(--surface); border-radius: 24px; box-shadow: 0 10px 34px rgba(29,58,109,.045); transition: transform .2s ease, box-shadow .2s ease; }
+    .project-card:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(25,56,110,.10); }
+    .project-preview { position: relative; min-height: 218px; padding: 22px 25px 24px; overflow: hidden; display: flex; flex-direction: column; gap: 13px; color: #eff6ff; isolation: isolate; }
+    .project-preview:after { content: ''; position: absolute; z-index: -1; width: 390px; height: 390px; right: -155px; top: -220px; border-radius: 50%; border: 1px solid rgba(255,255,255,.13); box-shadow: 0 0 0 60px rgba(255,255,255,.024), 0 0 0 135px rgba(255,255,255,.019); }
+    .project-preview.rulex { background: linear-gradient(145deg,#122951,#173f80 66%,#2159a0); }
+    .project-preview.bitcoin { background: linear-gradient(145deg,#30251c,#554026 66%,#725b2d); }
+    .project-preview.guard { background: linear-gradient(145deg,#103f39,#0d615c 72%,#137773); }
+    .project-preview.bitstack { background: linear-gradient(145deg,#161f40,#2d377d 75%,#424f9c); }
+    .project-windowbar { display:flex; justify-content: space-between; align-items:center; gap:12px; font-size:12px; font-weight:780; letter-spacing:.04em; opacity:.98; }
+    .project-windowbar .window-dots { display:flex; gap:5px; align-items:center; }
+    .project-windowbar .window-dots i { display:block; width:6px; height:6px; border-radius:50%; background: rgba(255,255,255,.63); }
+    .project-windowbar .window-dots i:first-child { background: #f1c67d; }
+    .project-screen { border: 1px solid rgba(255,255,255,.22); background: rgba(5,13,35,.23); border-radius: 14px; padding: 15px 17px; backdrop-filter: blur(4px); flex:1; }
+    .project-screen-title { font-size: 11px; font-weight: 760; opacity: .8; margin:0 0 9px; letter-spacing:.035em; }
+    .project-screen-feature { display:flex; align-items:center; justify-content:space-between; gap:10px; font-size: 15px; font-weight: 800; margin: 0 0 13px; letter-spacing:-.015em; }
+    .preview-label { font-size:10px; font-weight:800; border-radius: 6px; padding:5px 8px; background: rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.17); white-space:nowrap; }
+    .preview-milestones { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:7px; }
+    .preview-milestones span { font-size:10px; text-align:center; border-radius:7px; border:1px solid rgba(255,255,255,.18); padding:9px 4px; background:rgba(255,255,255,.095); }
+    .preview-milestones span:first-child { background:rgba(97,224,171,.2); }
+    .preview-flow {display:flex;gap:7px; flex-wrap:wrap; align-items:center;margin: 10px 0 0; font-size:11px; opacity:.92;}
+    .preview-flow b { font-size: 10px; padding: 7px 9px; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; background: rgba(255,255,255,.09); font-weight:700; }
+    .terminal-text { font: 11px/1.9 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .terminal-text div { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .terminal-text .prompt { color: #ffdf9a; }
+    .terminal-text .ok { color: #b8f1c3; }
+    .stack-amount { font-weight: 840; font-size: 27px; letter-spacing:-.045em; }
+    .stack-pill { display: inline-flex; align-items:center; gap:6px; padding:6px 9px; border-radius:999px; background:rgba(255,255,255,.12); font-size:10px; font-weight:760; }
+    .project-body { padding: 25px 27px 27px; flex: 1; display:flex; flex-direction:column; }
+    .project-type { display:flex;align-items:center;justify-content:space-between; gap: 10px; flex-wrap:wrap; margin-bottom: 11px; }
+    .project-type small { color:var(--muted); text-transform:uppercase;letter-spacing:.075em;font-size:11px;font-weight:800; }
+    .project-status { display:inline-flex; align-items:center;gap:7px;border-radius:999px;padding:6px 10px;background:var(--surface-2);color:var(--muted);font-size:11px;font-weight:750;border:1px solid var(--line); }
+    .project-status .status-dot { display:block;width:6px;height:6px;border-radius:50%;background:var(--blue); }
+    .project-status.live .status-dot { background:#1a9f6c; }
+    .project-body h3 { font-size: clamp(22px, 2.1vw, 27px); color:var(--ink-strong); letter-spacing:-.04em; margin: 0 0 12px; }
+    .project-body p { color:var(--muted);font-size:15px;line-height:1.76;margin:0 0 16px;max-width:60ch; }
+    .project-tags { display:flex;flex-wrap:wrap;gap:7px; margin-top:auto; }
+    .project-tags span { font-size:11px;font-weight:760;background:var(--surface-2);border-radius:7px;padding:7px 9px;color:var(--muted); }
+    .project-actions { display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:19px;padding-top:17px;border-top:1px solid var(--line); }
+    .project-actions a { display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:9px 13px;border:1px solid var(--line);border-radius:11px;font-weight:760;font-size:12px;color:var(--ink);text-decoration:none;background:var(--surface); }
+    .project-actions a:hover,.project-actions a:focus-visible { border-color:var(--blue);color:var(--blue); }
+    .project-actions a.primary { color:white;background:#205de7;border-color:#205de7; }
+    .project-actions a.primary:hover,.project-actions a.primary:focus-visible { background:#174bb8;color:white; }
+    .project-actions a .icon { width:14px;height:14px; }
+    .project-note { display:block;color:var(--muted-2);font-size:11px;line-height:1.6;margin-top:10px; }
+    .project-section-note { margin: 19px 0 0; font-size: 12px; line-height:1.8; color:var(--muted); max-width: 830px; }
+    @media (max-width: 1000px) { .nav-links { gap: 13px; } .nav-links a { font-size: 11px; } }
+    @media (max-width: 780px) { .projects-grid { grid-template-columns: 1fr; gap:18px; } .project-preview { min-height: 200px; } .project-body { padding:23px 23px 24px; } .nav-links a { font-size: 14px; } }
+    @media (max-width: 420px) { .project-preview { padding:18px 17px; min-height:192px; } .project-body { padding: 21px 20px; } .project-screen { padding:12px; } .preview-milestones span { font-size:9px; } .project-screen-feature { font-size: 13px; } }
+    @media (prefers-reduced-motion: reduce) { .project-card { transition:none; } .project-card:hover { transform:none; } }
   </style>
 </head>
 <body>
@@ -523,7 +579,7 @@
   <div class="container nav">
     <a class="wordmark" href="#top" aria-label="Thanat Manthananont, back to top"><span class="mark">TM</span><span>Thanat<span>.</span></span></a>
     <nav aria-label="Main navigation" class="nav-links" id="nav-links">
-      <a href="#about">About</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><svg class="icon light-icon"><use href="#i-moon"/></svg><svg class="icon dark-icon"><use href="#i-sun"/></svg></button>
@@ -541,7 +597,7 @@
         <h1 id="hero-title">Curious by nature.<br><em>Driven to make an impact.</em></h1>
         <p class="hero-desc">Hi, I'm <strong>Thanat Manthananont</strong> — a third-year Entrepreneurship student at Chiang Mai University. I grow by getting involved: leading teams, exploring new cultures, and learning through hands-on experiences.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="#activities">Explore my activities <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-primary" href="#projects">Explore my projects <svg class="icon"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#contact">Let's connect <svg class="icon"><use href="#i-external"/></svg></a>
         </div>
         <div class="social-line">
@@ -576,9 +632,97 @@
       </div>
     </div>
   </section>
+
+  <section class="content-section projects-area" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-heading">
+        <span class="kicker">02 / Selected projects</span>
+        <h2 id="projects-title">From ideas to<br>things I've built.</h2>
+        <p>Hands-on work across blockchain, Bitcoin infrastructure and financial technology. These are learning projects and prototypes; only publicly available demos are linked below.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-preview rulex" aria-label="Illustrative preview of RuleX milestones">
+            <div class="project-windowbar"><span>RULEX / ESCROW</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="project-screen">
+              <p class="project-screen-title">FREELANCE MILESTONES</p>
+              <div class="project-screen-feature"><span>Project agreement</span><span class="preview-label">Sepolia testnet</span></div>
+              <div class="preview-milestones"><span>01 · Agree ✓</span><span>02 · Fund ✓</span><span>03 · Release →</span></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type"><small>Smart contract platform</small><span class="project-status live"><span class="status-dot"></span>Live testnet demo</span></div>
+            <h3>RuleX — Milestone Escrow</h3>
+            <p>A freelance escrow DApp where clients and freelancers coordinate milestones, deposit test tokens and release payments after work approval. Built with Solidity, MetaMask and a responsive web interface.</p>
+            <div class="project-tags"><span>Solidity</span><span>Ethereum Sepolia</span><span>MetaMask</span><span>Web app</span></div>
+            <div class="project-actions"><a class="primary" href="https://rulex-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">Open live demo <svg class="icon"><use href="#i-external"/></svg></a><a href="https://github.com/thanatwwp/rulex" target="_blank" rel="noopener noreferrer">View source <svg class="icon"><use href="#i-github"/></svg></a></div>
+            <small class="project-note">Educational prototype. Sepolia and test RUSD only; not for real funds.</small>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-preview bitcoin" aria-label="Illustrative preview of the Bitcoin Regtest dashboard and explorer">
+            <div class="project-windowbar"><span>CHAIN ATLAS / REGTEST</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="project-screen terminal-text">
+              <div><span class="prompt">$</span> bitcoin-cli -regtest getblockchaininfo</div>
+              <div><span class="ok">✓</span> Bitcoin Core <span style="opacity:.75">· local node</span></div>
+              <div><span class="ok">✓</span> electrs <span style="opacity:.75">· indexing / history</span></div>
+              <div><span class="ok">✓</span> Chain Atlas <span style="opacity:.75">· blocks / transactions</span></div>
+              <div style="margin-top:6px;opacity:.76">→ Dashboards & explorer, local environment</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type"><small>Bitcoin infrastructure</small><span class="project-status"><span class="status-dot"></span>Local developer lab</span></div>
+            <h3>Regtest Observatory &amp; Chain Atlas</h3>
+            <p>Bitcoin Core and electrs tooling with a local dashboard and read-only block explorer. Built to inspect wallets, transactions, mempool activity and the workings of a private Regtest network.</p>
+            <div class="project-tags"><span>Bitcoin Core</span><span>Regtest</span><span>electrs</span><span>Node.js</span></div>
+            <div class="project-actions"><a class="primary" href="https://github.com/thanatwwp/bitcoin-regtest-lab" target="_blank" rel="noopener noreferrer">Explore on GitHub <svg class="icon"><use href="#i-github"/></svg></a></div>
+            <small class="project-note">Runs on a local Regtest node. No public live explorer is advertised.</small>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-preview guard" aria-label="Illustrative preview of AgentPay Guard payment policies">
+            <div class="project-windowbar"><span>AGENTPAY GUARD / POLICY</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="project-screen">
+              <p class="project-screen-title">PROGRAMMABLE PAYMENT RULES</p>
+              <div class="project-screen-feature"><span>Payment guard</span><span class="preview-label">Sepolia testnet</span></div>
+              <div class="preview-flow"><b>Owner</b><span>→</span><b>Agent</b><span>→</span><b>Approved supplier</b></div>
+              <div class="preview-flow"><b>Spending limits ✓</b><b>Allowlist ✓</b><b>Pause ✓</b></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type"><small>Stablecoin infrastructure</small><span class="project-status"><span class="status-dot"></span>Testnet prototype</span></div>
+            <h3>AgentPay Guard</h3>
+            <p>A smart contract prototype for policy-controlled payments, with owner and agent roles, allowed recipients, spending limits and an emergency pause. Designed for testing delegated payments safely.</p>
+            <div class="project-tags"><span>Solidity</span><span>Sepolia</span><span>ERC-20</span><span>Payment rules</span></div>
+            <div class="project-actions"><a href="mailto:thanat.pp14@gmail.com?subject=AgentPay%20Guard%20Prototype%20Walkthrough">Request a walkthrough <svg class="icon"><use href="#i-mail"/></svg></a></div>
+            <small class="project-note">Prototype code is private; this is not a public payment service.</small>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-preview bitstack" aria-label="Illustrative preview of Bitstack demo investing features">
+            <div class="project-windowbar"><span>BITSTACK / BITCOIN ONLY</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="project-screen">
+              <p class="project-screen-title">DEMO PORTFOLIO</p>
+              <div class="project-screen-feature"><span class="stack-amount">฿100,000</span><span class="preview-label">Simulated</span></div>
+              <div class="preview-flow"><span class="stack-pill">₿ Buy / sell</span><span class="stack-pill">↻ Auto-Stack</span><span class="stack-pill">⚡ Sats</span></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type"><small>Fintech app concept</small><span class="project-status"><span class="status-dot"></span>Interactive demo</span></div>
+            <h3>Bitstack — Bitcoin Investing</h3>
+            <p>A Bitcoin-only investment app prototype designed around simple BTC/THB purchases, adjustable recurring investing and small-value sats flows. Uses simulated funds and transactions for demonstration.</p>
+            <div class="project-tags"><span>Bitcoin</span><span>BTC / THB</span><span>Recurring buys</span><span>UX prototype</span></div>
+            <div class="project-actions"><a href="mailto:thanat.pp14@gmail.com?subject=Bitstack%20Demo%20Walkthrough">Request a walkthrough <svg class="icon"><use href="#i-mail"/></svg></a></div>
+            <small class="project-note">Simulation only. Not an exchange, custody service or live Bitcoin wallet.</small>
+          </div>
+        </article>
+      </div>
+      <p class="project-section-note">Visual previews are simplified illustrations of each project, not screenshots or claims of live transactions. All on-chain financial prototypes are for testing or demonstration.</p>
+    </div>
+  </section>
   <section class="content-section experience-area" id="activities" aria-labelledby="activities-title">
     <div class="container">
-      <div class="section-topline"><div class="section-heading"><span class="kicker">02 / Experiences</span><h2 id="activities-title">Activities that shaped<br>my journey.</h2><p>A collection of international, leadership, competitive, and hands-on learning experiences. Each one helped me build a different kind of skill.</p></div><span class="pill-note"><svg class="icon"><use href="#i-sparkle"/></svg> Explore by category</span></div>
+      <div class="section-topline"><div class="section-heading"><span class="kicker">03 / Experiences</span><h2 id="activities-title">Activities that shaped<br>my journey.</h2><p>A collection of international, leadership, competitive, and hands-on learning experiences. Each one helped me build a different kind of skill.</p></div><span class="pill-note"><svg class="icon"><use href="#i-sparkle"/></svg> Explore by category</span></div>
       <div class="filter-row" role="group" aria-label="Filter activities by category">
         <button type="button" class="filter-button" data-filter="all" aria-pressed="true">All activities</button>
         <button type="button" class="filter-button" data-filter="leadership" aria-pressed="false">Leadership</button>
@@ -627,7 +771,7 @@
     </div>
   </section>
   <section class="content-section" id="education" aria-labelledby="education-title">
-    <div class="container"><div class="section-heading"><span class="kicker">03 / Education</span><h2 id="education-title">The foundation<br>behind the curiosity.</h2><p>Academic study gives me a foundation; experiences help me put what I learn into practice.</p></div>
+    <div class="container"><div class="section-heading"><span class="kicker">04 / Education</span><h2 id="education-title">The foundation<br>behind the curiosity.</h2><p>Academic study gives me a foundation; experiences help me put what I learn into practice.</p></div>
       <div class="education-grid">
         <article class="edu-card edu-feature"><div class="edu-icon"><svg class="icon"><use href="#i-graduate"/></svg></div><span class="edu-overline">University · 3rd year</span><h3>Chiang Mai University</h3><p>International College of Digital Innovation<br>Entrepreneurship major</p><div class="edu-bottom"><div><strong>3.48</strong><span>GPAX</span></div><svg class="icon"><use href="#i-graduate"/></svg></div></article>
         <article class="edu-card"><div class="edu-icon"><svg class="icon"><use href="#i-book"/></svg></div><span class="edu-overline">Secondary education</span><h3>Chiang Mai University<br>Demonstration School</h3><p>Science–Mathematics Program</p><div class="edu-bottom"><div><strong>3.39</strong><span>GPAX</span></div><svg class="icon"><use href="#i-book"/></svg></div></article>
@@ -636,7 +780,7 @@
     </div>
   </section>
   <section class="content-section skills-area" id="skills" aria-labelledby="skills-title">
-    <div class="container"><div class="section-heading"><span class="kicker">04 / Skills</span><h2 id="skills-title">A growing toolkit.<br>Always learning.</h2><p>Digital tools, communication, and people skills developed through coursework and activities.</p></div>
+    <div class="container"><div class="section-heading"><span class="kicker">05 / Skills</span><h2 id="skills-title">A growing toolkit.<br>Always learning.</h2><p>Digital tools, communication, and people skills developed through coursework and activities.</p></div>
     <div class="skills-grid">
       <article class="skill-card"><div class="skill-heading"><span class="icon-wrap"><svg class="icon"><use href="#i-code"/></svg></span><h3>AI & digital tools</h3></div><div class="skill-pills"><span class="skill-pill">n8n</span><span class="skill-pill">Claude</span><span class="skill-pill">Base44</span><span class="skill-pill">Roboflow</span><span class="skill-pill">Remix IDE</span><span class="skill-pill">Canva</span></div></article>
       <article class="skill-card"><div class="skill-heading"><span class="icon-wrap"><svg class="icon"><use href="#i-laptop"/></svg></span><h3>Productivity</h3></div><div class="skill-pills"><span class="skill-pill">Microsoft Word</span><span class="skill-pill">Microsoft Excel</span><span class="skill-pill">PowerPoint</span></div></article>
@@ -645,7 +789,7 @@
     </div></div>
   </section>
   <section class="content-section contact-area" id="contact" aria-labelledby="contact-title">
-    <div class="container contact-grid"><div><span class="kicker">05 / Contact</span><h2 id="contact-title">Good things start<br>with a conversation.</h2><p>I'm interested in internship opportunities and learning from professionals. I'd be glad to connect and hear about what your team is working on.</p><a href="mailto:thanat.pp14@gmail.com?subject=Hello%20Thanat%20%E2%80%94%20Opportunity%20to%20connect" class="btn btn-primary">Send an email <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    <div class="container contact-grid"><div><span class="kicker">06 / Contact</span><h2 id="contact-title">Good things start<br>with a conversation.</h2><p>I'm interested in internship opportunities and learning from professionals. I'd be glad to connect and hear about what your team is working on.</p><a href="mailto:thanat.pp14@gmail.com?subject=Hello%20Thanat%20%E2%80%94%20Opportunity%20to%20connect" class="btn btn-primary">Send an email <svg class="icon"><use href="#i-arrow"/></svg></a></div>
       <div class="contact-list"><a class="contact-link email" href="mailto:thanat.pp14@gmail.com"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-mail"/></svg></span><span><b>Email</b><small>thanat.pp14@gmail.com</small></span></span><svg class="icon"><use href="#i-external"/></svg></a><a class="contact-link linkedin" href="https://www.linkedin.com/in/thanat-manthananont-4a420843b/" target="_blank" rel="noopener noreferrer"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-linkedin"/></svg></span><span><b>LinkedIn</b><small>Connect professionally</small></span></span><svg class="icon"><use href="#i-external"/></svg></a><a class="contact-link github" href="https://github.com/thanatwwp" target="_blank" rel="noopener noreferrer"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-github"/></svg></span><span><b>GitHub</b><small>Explore my development work</small></span></span><svg class="icon contact-chevron"><use href="#i-external"/></svg></a></div>
     </div>
   </section>
