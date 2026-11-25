@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta name="portfolio-release" content="2026-11-25-year-inline" />
+  <meta name="portfolio-release" content="2026-11-25-highlights-polish" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The personal portfolio of Thanat Manthananont — an entrepreneurship student at Chiang Mai University with experience in international exchange, team leadership, and digital innovation.">
@@ -565,16 +565,32 @@
     @media (max-width: 640px) { .advisor-card { grid-template-columns: 1fr; gap: 20px; } .advisor-avatar { width: 80px; height: 80px; border-radius: 15px; gap: 5px; } .advisor-avatar .icon { width: 23px; height: 23px; } .advisor-avatar span { font-size: 16px; } }
 
   
-        .stats-grid { grid-template-columns: minmax(0, 2.1fr) repeat(3, minmax(0, 1fr)); }
-    .stat .stat-year-label { margin: 0; font-size: clamp(14px, 1.65vw, 23px); white-space: nowrap; letter-spacing: -.035em; line-height: 1.35; }
-    @media (max-width: 780px) {
-      .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .stats-grid .stat { border: 0; min-width: 0; }
-      .stats-grid .stat-year { grid-column: 1 / -1; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
-      .stat .stat-year-label { font-size: clamp(12px, 3.8vw, 23px); }
-      .stats-grid .stat:nth-child(2), .stats-grid .stat:nth-child(3) { border-right: 1px solid var(--line); }
+        /* Balanced profile highlights */
+    .stats-grid { display: grid; grid-template-columns: minmax(0, 2.35fr) minmax(0, .85fr) minmax(0, 1.2fr) minmax(0, 1.2fr); align-items: stretch; min-height: 0; padding: 27px 0; }
+    .stats-grid .stat { min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; gap: 7px; padding: 5px 21px; border: 0; border-right: 1px solid var(--line); }
+    .stats-grid .stat:first-child { padding-left: 0; }
+    .stats-grid .stat:last-child { padding-right: 0; border-right: 0; }
+    .stats-grid .stat strong { margin: 0; font-size: 25px; font-weight: 720; letter-spacing: -.035em; line-height: 1.3; }
+    .stats-grid .stat .stat-year-label { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; white-space: normal; overflow-wrap: normal; }
+    .stats-grid .stat span { margin: 0; font-size: 13px; font-weight: 550; line-height: 1.55; color: var(--muted); }
+    @media (min-width: 1200px) { .stats-grid .stat .stat-year-label { white-space: nowrap; } }
+    @media (max-width: 960px) {
+      .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 20px 0; }
+      .stats-grid .stat { padding: 12px 18px; border: 0; border-right: 1px solid var(--line); }
+      .stats-grid .stat-year { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid var(--line); padding: 3px 0 19px; margin-bottom: 13px; }
+      .stats-grid .stat:nth-child(2) { padding-left: 0; }
+      .stats-grid .stat:last-child { padding-right: 0; border-right: 0; }
+      .stats-grid .stat .stat-year-label { font-size: clamp(18px, 3.3vw, 23px); }
     }
-    @media (max-width: 360px) { .stats-grid .stat:not(.stat-year) strong { font-size: 20px; } }
+    @media (max-width: 520px) {
+      .stats-grid { grid-template-columns: 1fr; padding: 9px 0; }
+      .stats-grid .stat, .stats-grid .stat:first-child, .stats-grid .stat:last-child { padding: 15px 0 !important; border: 0; border-bottom: 1px solid var(--line); margin: 0; }
+      .stats-grid .stat:last-child { border-bottom: 0; }
+      .stats-grid .stat:not(.stat-year) { display: grid; grid-template-columns: 102px minmax(0, 1fr); align-items: center; gap: 15px; }
+      .stats-grid .stat strong { font-size: 23px; }
+      .stats-grid .stat .stat-year-label { font-size: clamp(16px, 4.5vw, 21px); line-height: 1.4; }
+      .stats-grid .stat span { font-size: 13px; }
+    }
   </style>
 </head>
 <body>
@@ -649,7 +665,7 @@
   </section>
   <div class="stats-band" aria-label="Profile highlights">
     <div class="container stats-grid">
-      <div class="stat stat-year"><strong class="stat-year-label">3rd Year Student · Chiang Mai University</strong></div>
+      <div class="stat stat-year"><strong class="stat-year-label">3rd Year Student · Chiang Mai University</strong><span>International College of Digital Innovation</span></div>
       <div class="stat"><strong>3.48</strong><span>University GPAX</span></div>
       <div class="stat"><strong>2022–23</strong><span>Rotary Youth Exchange · Germany</span></div>
       <div class="stat"><strong>2025</strong><span>Academic Excellence Certificate</span></div>
