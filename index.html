@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta name="portfolio-release" content="2026-11-24-projects-showcase" />
+  <meta name="portfolio-release" content="2026-11-25-advisor" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The personal portfolio of Thanat Manthananont — an entrepreneurship student at Chiang Mai University with experience in international exchange, team leadership, and digital innovation.">
@@ -542,6 +542,27 @@
     @media (max-width: 780px) { .projects-grid { grid-template-columns: 1fr; gap:18px; } .project-preview { min-height: 200px; } .project-body { padding:23px 23px 24px; } .nav-links a { font-size: 14px; } }
     @media (max-width: 420px) { .project-preview { padding:18px 17px; min-height:192px; } .project-body { padding: 21px 20px; } .project-screen { padding:12px; } .preview-milestones span { font-size:9px; } .project-screen-feature { font-size: 13px; } }
     @media (prefers-reduced-motion: reduce) { .project-card { transition:none; } .project-card:hover { transform:none; } }
+  
+    /* Academic advisor */
+    .advisor-area { background: var(--bg); }
+    .advisor-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); align-items: start; gap: 28px; max-width: 820px; padding: clamp(22px, 4vw, 34px); background: var(--surface); border: 1px solid var(--line); border-radius: 22px; }
+    .advisor-avatar { width: 110px; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--line); background: var(--surface-2); color: var(--blue); border-radius: 20px; }
+    .advisor-avatar .icon { width: 29px; height: 29px; }
+    .advisor-avatar span { font-size: 18px; font-weight: 750; letter-spacing: .07em; }
+    .advisor-info { min-width: 0; }
+    .advisor-info h3 { font-size: clamp(22px, 2.7vw, 30px); line-height: 1.35; color: var(--ink-strong); margin: 0 0 9px; }
+    .advisor-affiliation { display: flex; gap: 9px; align-items: center; color: var(--muted); font-size: 16px; line-height: 1.6; margin: 0 0 23px; }
+    .advisor-affiliation .icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .advisor-info h4 { color: var(--ink-strong); font-size: 15px; font-weight: 700; margin: 0 0 11px; }
+    .advisor-specializations { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 23px; }
+    .advisor-specializations span { font-size: 14px; line-height: 1.5; padding: 8px 12px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 9px; }
+    .advisor-email { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: 15px; font-weight: 650; line-height: 1.6; max-width: 100%; text-decoration: underline; text-underline-offset: 4px; }
+    .advisor-email span { overflow-wrap: anywhere; min-width: 0; }
+    .advisor-email .icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .advisor-email:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 3px; }
+    @media (min-width: 781px) and (max-width: 1100px) { .nav-links { gap: 11px; } .nav-links a { font-size: 11px; } }
+    @media (max-width: 640px) { .advisor-card { grid-template-columns: 1fr; gap: 20px; } .advisor-avatar { width: 80px; height: 80px; border-radius: 15px; gap: 5px; } .advisor-avatar .icon { width: 23px; height: 23px; } .advisor-avatar span { font-size: 16px; } }
+
   </style>
 </head>
 <body>
@@ -579,7 +600,7 @@
   <div class="container nav">
     <a class="wordmark" href="#top" aria-label="Thanat Manthananont, back to top"><span class="mark">TM</span><span>Thanat<span>.</span></span></a>
     <nav aria-label="Main navigation" class="nav-links" id="nav-links">
-      <a href="#about">About</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#advisor">Advisor</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><svg class="icon light-icon"><use href="#i-moon"/></svg><svg class="icon dark-icon"><use href="#i-sun"/></svg></button>
@@ -788,8 +809,23 @@
       <article class="skill-card"><div class="skill-heading"><span class="icon-wrap"><svg class="icon"><use href="#i-people"/></svg></span><h3>People & problem solving</h3></div><div class="skill-pills"><span class="skill-pill">Leadership</span><span class="skill-pill">Teamwork</span><span class="skill-pill">Communication</span><span class="skill-pill">Responsibility</span><span class="skill-pill">Problem solving</span><span class="skill-pill">Flexibility & resilience</span></div></article>
     </div></div>
   </section>
+  <section class="content-section advisor-area" id="advisor" aria-labelledby="advisor-title">
+    <div class="container">
+      <div class="section-heading"><span class="kicker">06 / Academic advisor</span><h2 id="advisor-title">Academic Advisor</h2></div>
+      <article class="advisor-card" aria-labelledby="advisor-name">
+        <div class="advisor-avatar" aria-hidden="true"><svg class="icon"><use href="#i-graduate"/></svg><span>NU</span></div>
+        <div class="advisor-info">
+          <h3 id="advisor-name">Dr. Nathapon Udomlertsakul</h3>
+          <p class="advisor-affiliation"><svg class="icon" aria-hidden="true"><use href="#i-graduate"/></svg> Chiang Mai University</p>
+          <h4>Specialization</h4>
+          <div class="advisor-specializations"><span>Differential Geometry</span><span>Automated Market Maker</span><span>Mathematical Analysis</span></div>
+          <a class="advisor-email" href="mailto:nathapon.u@icdi.cmu.ac.th"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>nathapon.u@icdi.cmu.ac.th</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
   <section class="content-section contact-area" id="contact" aria-labelledby="contact-title">
-    <div class="container contact-grid"><div><span class="kicker">06 / Contact</span><h2 id="contact-title">Good things start<br>with a conversation.</h2><p>I'm interested in internship opportunities and learning from professionals. I'd be glad to connect and hear about what your team is working on.</p><a href="mailto:thanat.pp14@gmail.com?subject=Hello%20Thanat%20%E2%80%94%20Opportunity%20to%20connect" class="btn btn-primary">Send an email <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    <div class="container contact-grid"><div><span class="kicker">07 / Contact</span><h2 id="contact-title">Good things start<br>with a conversation.</h2><p>I'm interested in internship opportunities and learning from professionals. I'd be glad to connect and hear about what your team is working on.</p><a href="mailto:thanat.pp14@gmail.com?subject=Hello%20Thanat%20%E2%80%94%20Opportunity%20to%20connect" class="btn btn-primary">Send an email <svg class="icon"><use href="#i-arrow"/></svg></a></div>
       <div class="contact-list"><a class="contact-link email" href="mailto:thanat.pp14@gmail.com"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-mail"/></svg></span><span><b>Email</b><small>thanat.pp14@gmail.com</small></span></span><svg class="icon"><use href="#i-external"/></svg></a><a class="contact-link linkedin" href="https://www.linkedin.com/in/thanat-manthananont-4a420843b/" target="_blank" rel="noopener noreferrer"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-linkedin"/></svg></span><span><b>LinkedIn</b><small>Connect professionally</small></span></span><svg class="icon"><use href="#i-external"/></svg></a><a class="contact-link github" href="https://github.com/thanatwwp" target="_blank" rel="noopener noreferrer"><span class="contact-main"><span class="leading-icon"><svg class="icon"><use href="#i-github"/></svg></span><span><b>GitHub</b><small>Explore my development work</small></span></span><svg class="icon contact-chevron"><use href="#i-external"/></svg></a></div>
     </div>
   </section>
