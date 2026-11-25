@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta name="portfolio-release" content="2026-11-25-moon-icon" />
+  <meta name="portfolio-release" content="2026-11-25-theme-state-icons" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The personal portfolio of Thanat Manthananont — an entrepreneurship student at Chiang Mai University with experience in international exchange, team leadership, and digital innovation.">
@@ -83,7 +83,7 @@
     .nav-actions { display: flex; align-items: center; gap: 10px; }
     .theme-button, .menu-button { background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 11px; width: 40px; height: 40px; display: grid; place-items: center; }
     .theme-button .icon, .menu-button .icon { width: 18px; height: 18px; }
-    .theme-button .light-icon { width: 21px; height: 21px; stroke-width: 1.8; }
+    .theme-button .light-icon, .theme-button .dark-icon { width: 21px; height: 21px; stroke-width: 1.8; }
     .theme-button:hover, .menu-button:hover { background: var(--surface-2); }
     .dark-icon { display: none; }
     html[data-theme="dark"] .light-icon { display: none; }
@@ -604,7 +604,7 @@
       <a href="#about">About</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#advisor">Advisor</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><svg class="icon light-icon"><use href="#i-moon"/></svg><svg class="icon dark-icon"><use href="#i-sun"/></svg></button>
+      <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><svg class="icon light-icon" aria-hidden="true"><use href="#i-sun"/></svg><svg class="icon dark-icon" aria-hidden="true"><use href="#i-moon"/></svg></button>
       <a href="mailto:thanat.pp14@gmail.com" class="btn btn-primary nav-cta">Get in touch <svg class="icon"><use href="#i-arrow"/></svg></a>
       <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu"><svg class="icon"><use href="#i-menu"/></svg></button>
     </div>
