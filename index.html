@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta name="portfolio-release" content="2026-11-25-year-typography" />
+  <meta name="portfolio-release" content="2026-11-25-year-inline" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The personal portfolio of Thanat Manthananont — an entrepreneurship student at Chiang Mai University with experience in international exchange, team leadership, and digital innovation.">
@@ -565,7 +565,16 @@
     @media (max-width: 640px) { .advisor-card { grid-template-columns: 1fr; gap: 20px; } .advisor-avatar { width: 80px; height: 80px; border-radius: 15px; gap: 5px; } .advisor-avatar .icon { width: 23px; height: 23px; } .advisor-avatar span { font-size: 16px; } }
 
   
-    .stat .stat-year-label { margin-top: 6px; overflow-wrap: anywhere; }
+        .stats-grid { grid-template-columns: minmax(0, 2.1fr) repeat(3, minmax(0, 1fr)); }
+    .stat .stat-year-label { margin: 0; font-size: clamp(14px, 1.65vw, 23px); white-space: nowrap; letter-spacing: -.035em; line-height: 1.35; }
+    @media (max-width: 780px) {
+      .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .stats-grid .stat { border: 0; min-width: 0; }
+      .stats-grid .stat-year { grid-column: 1 / -1; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+      .stat .stat-year-label { font-size: clamp(12px, 3.8vw, 23px); }
+      .stats-grid .stat:nth-child(2), .stats-grid .stat:nth-child(3) { border-right: 1px solid var(--line); }
+    }
+    @media (max-width: 360px) { .stats-grid .stat:not(.stat-year) strong { font-size: 20px; } }
   </style>
 </head>
 <body>
@@ -640,7 +649,7 @@
   </section>
   <div class="stats-band" aria-label="Profile highlights">
     <div class="container stats-grid">
-      <div class="stat"><strong>3rd</strong><strong class="stat-year-label">Year · Chiang Mai University</strong></div>
+      <div class="stat stat-year"><strong class="stat-year-label">3rd Year Student · Chiang Mai University</strong></div>
       <div class="stat"><strong>3.48</strong><span>University GPAX</span></div>
       <div class="stat"><strong>2022–23</strong><span>Rotary Youth Exchange · Germany</span></div>
       <div class="stat"><strong>2025</strong><span>Academic Excellence Certificate</span></div>
